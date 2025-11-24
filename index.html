@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flappy Turtle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <main class="game-area">
+      <canvas id="game" width="480" height="720" aria-label="Flappy Turtle"></canvas>
+      <div id="overlay" class="overlay hidden" role="dialog" aria-live="polite"></div>
+    </main>
+    <aside class="sidebar">
+      <h1>Flappy Turtle</h1>
+      <div class="panel">
+        <div class="label">Puntuación</div>
+        <div id="score" class="score">0</div>
+      </div>
+      <div class="panel">
+        <div class="label">Tu nombre</div>
+        <input id="playerName" type="text" maxlength="16" placeholder="Escribe tu nombre" />
+        <small>Usado para el ranking local</small>
+      </div>
+      <div class="panel actions">
+        <button id="btnStart">Jugar</button>
+        <button id="btnRestart" class="secondary">Reiniciar</button>
+        <button id="btnClear" class="secondary">Borrar ranking</button>
+      </div>
+      <div class="panel">
+        <div class="label">Controles</div>
+        <ul class="controls">
+          <li>Espacio / Clic / Toque: Sumergir</li>
+          <li>R: Reiniciar</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="label">Ranking (Top 10)</div>
+        <ol id="leaderboard" class="leaderboard"></ol>
+      </div>
+      <footer>
+        <small>Progreso y ranking almacenados en tu navegador (localStorage).</small>
+      </footer>
+    </aside>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
